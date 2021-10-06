@@ -117,19 +117,40 @@ span {
     left: 450px;
 }
 
-.input-container[data-err] .input {
-    border-color: #c92432;
-    color: #c92432;
-    background: #fffafa;
-}
-
-.input-container[data-err]::after {
-    content: attr(data-err);
-    font-size: 0.85rem;
-    color: #c92432;
-    display: block;
-}
-
-.input {
+input {
     transition: background 0.2s, border 0.2s;
+}
+
+/* Media Queries are here */
+
+@media (max-width: 900px) {
+    .hero {
+      flex-direction: column;
+    }
+  
+    form,
+    .form-box {
+      width: 100%;
+    }
+  
+    .btn {
+      flex-direction: column;
+    }
+    .image {
+      height: 70vh;
+    }
+  }
+  
+  @media (max-width: 425px) {
+    form {
+      padding: 20px;
+    }
+  }
+  
+p {
+    margin: 0;
+}
+
+.signup-btn {
+    margin-top: 0;
 }
